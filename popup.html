@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="PopupCtrl">
+<div class="container">
+
+    <ul>
+        <li class="cookie" ng-repeat="cookie in cookies | orderBy:'name'">
+            <div class="cookie-header">
+                <span class="cookie-name">{{ cookie.name }}</span>
+                <span class="cookie-domain">[{{ cookie.domain }}]</span>
+            </div>
+            <div class="cookie-value">
+                <span class="summary">{{ cookie.value }}</span>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
